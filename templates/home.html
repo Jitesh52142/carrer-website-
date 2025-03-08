@@ -19,22 +19,27 @@
             background-color: #f8f9fa;
         }
 
+        /* Header */
+        .header {
+            background: #007BFF;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
         /* Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #007BFF;
+            background: #0056b3;
             padding: 15px 40px;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar h1 {
-            color: white;
-            font-size: 24px;
         }
 
         .navbar a {
@@ -77,14 +82,6 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
-        /* Section Headings */
-        h2 {
-            font-size: 28px;
-            color: #555;
-            margin-top: 40px;
-            font-weight: 600;
-        }
-
         /* Paragraphs */
         .bodytext {
             font-size: 18px;
@@ -94,20 +91,13 @@
             text-align: justify;
         }
 
-         /* Open Positions */
+        /* Job Openings */
         .jobs-section {
-            /* background: #f1f1f1; */
             padding: 20px;
             margin-top: 30px;
             border-radius: 10px;
             text-align: left;
         }
-
-        .job-text {
-            font-size: 18px;
-            color: #444;
-            font-style: italic;
-        } 
 
         /* Contact Button */
         .button-container {
@@ -132,6 +122,22 @@
             transform: translateY(-2px);
         }
 
+        /* Footer */
+        .footer {
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 16px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .navbar {
@@ -153,50 +159,43 @@
                 font-size: 30px;
             }
 
-            h2 {
-                font-size: 24px;
-            }
-
             .bodytext {
                 font-size: 16px;
-            }
-
-            #banner {
-                height: 280px;
             }
         }
     </style>
 </head>
 
 <body>
+    <div class="header">Career Guide</div>
 
     <!-- Navbar -->
     <div class="navbar">
-        <h1>Career Guide</h1>
-        <a href="#contact">Contact Us</a>
+        <a href="#">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#contact">Contact</a>
     </div>
 
     <!-- Main Container -->
     <div id="container">
-        <h1>Career Guide</h1>
+        <h1>Welcome to Career Guide</h1>
 
         <img id="banner" src="http://127.0.0.1:5000/static/jason-leung-F2WX4BTIkpQ-unsplash.jpg" alt="Career Guide Banner">
 
-        <h2>About Career Guide</h2>
+        <h2 id="about">About Career Guide</h2>
         <p class="bodytext">
-            <strong>Join Our Team & Build Your Future!</strong> 🚀<br><br>
-            At <strong>carrer guide </strong>, we believe in <strong>innovation, growth, and excellence</strong>. We are always looking for passionate individuals who want to make a difference. Whether you're a <strong>fresh graduate</strong> or an <strong>experienced professional</strong>, we offer opportunities that empower you to learn, lead, and succeed.<br><br>
-            Join us and be part of a dynamic team that values <strong>creativity, collaboration, and career development</strong>. Explore our open positions and take the next step toward an exciting future!
+            Join Our Team & Build Your Future! 🚀<br><br>
+            We believe in innovation, growth, and excellence. We are always looking for passionate individuals who want to make a difference.<br><br>
+            At Career Guide, we foster an environment where professionals can expand their knowledge, sharpen their skills, and reach new heights in their careers. Our dynamic work culture encourages creativity, collaboration, and personal development.<br><br>
+            Whether you are a recent graduate eager to explore opportunities or an experienced professional looking for a career change, we provide a wide array of job openings that align with your aspirations. Our mentors and leaders are committed to guiding you toward success.
         </p>
 
-        <h2>Job Opeanings </h2>
-
+        <h2 id="jobs">Job Openings</h2>
         <div class="jobs-section">
-           
             {% for job in jobs %}
-                {% include 'jobitem.html' %}   
+                {% include 'jobitem.html' %}
             {% endfor %}
-            
         </div>
 
         <div class="button-container" id="contact">
@@ -204,6 +203,10 @@
         </div>
     </div>
 
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 Career Guide | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+    </div>
 </body>
 
 </html>
