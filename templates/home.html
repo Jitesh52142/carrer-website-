@@ -94,19 +94,20 @@
             text-align: justify;
         }
 
-        /* Open Positions */
+         /* Open Positions */
         .jobs-section {
-            background: #f1f1f1;
+            /* background: #f1f1f1; */
             padding: 20px;
             margin-top: 30px;
             border-radius: 10px;
+            text-align: left;
         }
 
         .job-text {
             font-size: 18px;
             color: #444;
             font-style: italic;
-        }
+        } 
 
         /* Contact Button */
         .button-container {
@@ -189,8 +190,13 @@
         </p>
 
         <h2>Open Positions</h2>
+
         <div class="jobs-section">
-            <p class="job-text">🔍 <em>Stay tuned! We will be updating our job openings soon.</em></p>
+           
+            {% for job in jobs %}
+                {% include 'jobitem.html' %}   
+            {% endfor %}
+            
         </div>
 
         <div class="button-container" id="contact">
