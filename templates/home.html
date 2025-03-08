@@ -60,7 +60,7 @@
             max-width: 900px;
             margin: 50px auto;
             background: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -79,7 +79,13 @@
             object-fit: cover;
             border-radius: 10px;
             margin-top: 20px;
+            margin-bottom: 40px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Spacing */
+        .section {
+            margin-bottom: 50px;
         }
 
         /* Paragraphs */
@@ -89,19 +95,30 @@
             color: #666;
             padding: 0 20px;
             text-align: justify;
+            margin-top: 20px;
         }
 
         /* Job Openings */
         .jobs-section {
-            padding: 20px;
-            margin-top: 30px;
+            padding: 30px;
+            margin-top:80px;
+            margin-bottom: 100px;
             border-radius: 10px;
             text-align: left;
+            
+        }
+
+        /* Section Titles */
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 40px;
         }
 
         /* Contact Button */
         .button-container {
-            margin-top: 30px;
+            margin-top: 40px;
             text-align: center;
         }
 
@@ -183,15 +200,17 @@
 
         <img id="banner" src="http://127.0.0.1:5000/static/jason-leung-F2WX4BTIkpQ-unsplash.jpg" alt="Career Guide Banner">
 
-        <h2 id="about">About Career Guide</h2>
+        <h2 id="about" class="section"><strong>About Career Guide</strong></h2>
         <p class="bodytext">
-            Join Our Team & Build Your Future! 🚀<br><br>
-            We believe in innovation, growth, and excellence. We are always looking for passionate individuals who want to make a difference.<br><br>
-            At Career Guide, we foster an environment where professionals can expand their knowledge, sharpen their skills, and reach new heights in their careers. Our dynamic work culture encourages creativity, collaboration, and personal development.<br><br>
-            Whether you are a recent graduate eager to explore opportunities or an experienced professional looking for a career change, we provide a wide array of job openings that align with your aspirations. Our mentors and leaders are committed to guiding you toward success.
-        </p>
+            <strong>Join Our Team & Build Your Future! 🚀</strong><br><br><b>
+            We believe in innovation, growth, and excellence. We are always looking for passionate individuals who want to make a difference.<br><br></p>
 
-        <h2 id="jobs">Job Openings</h2>
+        </p>
+        <p class="bodytext" style="margin-bottom: 50px;"><b>
+            At Career Guide, we foster an environment where professionals can expand their knowledge, sharpen their skills, and reach new heights in their careers. Our dynamic work culture encourages creativity, collaboration, and personal development.
+       </b></p>
+
+        <h2 id="jobs" class="section"><strong>Job Openings</strong></h2>
         <div class="jobs-section">
             {% for job in jobs %}
                 {% include 'jobitem.html' %}
